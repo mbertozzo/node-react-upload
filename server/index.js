@@ -1,7 +1,9 @@
 /* eslint consistent-return:0 import/order:0 */
 
 const express = require('express');
+const cors = require('cors');
 const logger = require('./logger');
+const upload = require('./api/');
 
 const argv = require('./argv');
 const port = require('./port');
@@ -16,6 +18,14 @@ const app = express();
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
+const corsOptions = {
+  origin: '*',
+  optionsSucessStatus: 200,
+}
+
+app.use(cors(corsOptions));
+
+app.use('/upload', upload);
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
