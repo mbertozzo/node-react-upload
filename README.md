@@ -6,7 +6,7 @@ To start using this app you simply have to:
 
 1. clone this repo with the command
 ```bash
-$ git clone git@github.com:mbertozzo/graphql-api-talk.git your-folder
+$ git clone git@github.com:mbertozzo/node-react-upload.git your-folder
 ```
 
 2. install the dependecies:
